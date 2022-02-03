@@ -1,0 +1,111 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Big Shoulders Display', cursive;
+	font-family: 'Lexend Deca', sans-serif;
+}
+body {
+	height: 100vh;
+	width: 100%;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+:root {
+	--Bright-orange: hsl(31, 77%, 52%);
+	--Dark-cyan: hsl(184, 100%, 22%);
+	--Very-dark-cyan: hsl(179, 100%, 13%);
+
+	--transparent-white-paragraphs: hsla(0, 0%, 100%, 0.75);
+	--very-light-gray: hsl(0, 0%, 95%);
+}
+
+.container {
+	display: flex;
+
+	width: 60%;
+	height: 80vh;
+}
+.sedans__card,
+.suvs__card,
+.luxury__card {
+	display: flex;
+	flex-direction: column;
+
+	flex: 1 33%;
+	gap: 2rem;
+
+	color: var(--transparent-white-paragraphs);
+
+	padding: 2.25rem 2.25rem;
+}
+
+.sedans__card {
+	background-color: var(--Bright-orange);
+	border-radius: 10px 0px 0px 10px;
+}
+.suvs__card {
+	background-color: var(--Dark-cyan);
+}
+.luxury__card {
+	background-color: var(--Very-dark-cyan);
+	border-radius: 0px 10px 10px 0px;
+}
+
+.card_image {
+	width: 20%;
+}
+
+.card__title {
+	font-size: 30px;
+	text-transform: uppercase;
+}
+
+.card__description {
+	text-transform: inherit;
+	font-size: 15px;
+
+	width: 65%;
+}
+
+button {
+	margin-top: 2.25rem;
+
+	padding: 1rem 3rem;
+
+	background-color: var(--very-light-gray);
+
+	border: none;
+	border-radius: 30px;
+
+	width: 70%;
+}
+
+.sedans__btn {
+	color: var(--Bright-orange);
+}
+.suvs__btn {
+	color: var(--Dark-cyan);
+}
+.luxury__btn {
+	color: var(--Very-dark-cyan);
+}
+
+@media (max-width: 900px) {
+	.container {
+		flex-direction: column;
+		width: 90%;
+	}
+
+	.sedans__card {
+		border-radius: 10px 10px 0px 0px;
+	}
+	.suvs__card {
+	}
+	.luxury__card {
+		border-radius: 0px 0px 10px 10px;
+	}
+}
